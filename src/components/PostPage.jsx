@@ -4,7 +4,7 @@ const PostPage = () => {
   return (
     <section>
       <div className="container">
-        <h1 className="home-header">Welcome to Post Page</h1>
+        <h1 className="page-header">Welcome to Post Page</h1>
       </div>
     </section>
   )

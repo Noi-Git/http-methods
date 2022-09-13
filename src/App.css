@@ -9,9 +9,44 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   background-color: rgb(241, 238, 238);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  height: 1 150px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  border: 1px solid rgb(220, 217, 217);
+  background-color: rgb(250, 248, 248);
+  border-radius: 8px;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.blog-description {
+  font-size: 1.1rem;
+  line-height: 30px;
+  padding: 10px 0;
 }
 
 .blog-list {
