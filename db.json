@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "What is Ayurveda?",
+      "description": "Ayurveda is a natural system of medicine, originated in India more than 3,000 years ago. Ayurveda translates to knowledge of life. Based on the idea that disease is due to an imbalance or stress in a person's consciousness, Ayurveda encourages certain lifestyle interventions and natural therapies to regain a balance between the body, mind, spirit, and the environment. Ayurveda treatment starts with an internal purification process, followed by a special diet, herbal remedies, massage therapy, yoga, and meditation. Reference: hopkinsmedicine.org/health/wellness-and-prevention/ayurveda"
+    },
+    {
+      "id": 2,
+      "title": "12 Powerful Ayurvedic Herbs and Spices with Health Benefits",
+      "description": " 12 Ayurvedic herbs and spices with science-backed health benefits. 1. Ashwagandha 2. Boswellia 3–5. Triphala 6. Brahmi 7. Cumin 8. Turmeric 9. Licorice root 10. Gotu kola 11. Bitter melon 12. Cardamom Reference: https://www.healthline.com/nutrition/ayurvedic-herbs"
+    }
+  ]
+}
