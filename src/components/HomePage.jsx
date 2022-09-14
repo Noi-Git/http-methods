@@ -1,18 +1,35 @@
-import React from 'react'
-import '../App.css';
-import BlogPage from './BlogPage';
-import DetailPage from './DetailPage'
-
+// import React from 'react'
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import "../App.css";
+import BlogPage from "./BlogPage";
 
 const HomePage = () => {
+  const [posts, setPosts] = useState([]);
+
+  const getPost = () => {
+    axios.get("http://localhost:3000/posts").then((response) => {
+      setPosts(response.data);
+    });
+  };
+  useEffect(getPost, []);
+
   return (
     <section>
-      <div className="container">
-        <h1 className="page-header">Welcome to Simple Blog</h1>
-        <BlogPage />
-      </div>
+      <h1 className="page-header">Welcome to Simple Blog</h1>
+      {posts.map((post) => {
+        return (
+          <BlogPage
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            description={post.description}
+          />
+        );
+      })}
     </section>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
