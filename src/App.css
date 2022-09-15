@@ -87,3 +87,51 @@ body {
   justify-content: center;
   margin-top: 2rem;
 }
+
+.post {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.post-description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title-input {
+  margin-left: 30px;
+  font-size: 1.3rem;
+  padding: 7px 4px;
+  width: 50vw;
+}
+
+/* -----wysiwyg editor ----- */
+.rich-text-editor {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.editor-class {
+  background-color:rgb(255, 255, 255);
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.toolbar-class {
+  border: 1px solid #ccc;
+}
+
