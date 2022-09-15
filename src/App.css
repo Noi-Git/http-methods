@@ -33,12 +33,18 @@ body {
 }
 
 .add-post-button {
-  font-size: 1.2rem;
-  padding: 20px 40px;
+  font-size: 1.3rem;
+  padding: 15px 40px;
   border: none;
   border-radius: 10px;
   background-color: rgb(45, 154, 15);
+}
+
+.add-post-button:hover,
+.add-post-button:visited,
+.add-post-button:active {
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .blog {

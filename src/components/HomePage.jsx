@@ -1,15 +1,16 @@
 // import React from 'react'
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
-import "../App.css";
-import BlogPage from "./BlogPage";
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import '../App.css';
+import BlogPage from './BlogPage';
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
 
   const getPost = () => {
-    axios.get("http://localhost:3000/posts").then((response) => {
+    axios.get('http://localhost:3000/posts').then((response) => {
       setPosts(response.data);
     });
   };
@@ -17,9 +18,16 @@ const HomePage = () => {
 
   return (
     <section>
-      <h1 className="page-header">Welcome to Simple Blog</h1>
-      <div className="add-post">
-        <button className="add-post-button"> Add Post</button>
+      <h1 className='page-header'>Welcome to Simple Blog</h1>
+      <div className='add-post'>
+        <button className='add-post-button'>
+          <Link
+            style={{ textDecoration: 'none', color: '#ffffff' }}
+            to={'/post'}
+          >
+            Add Post
+          </Link>
+        </button>
       </div>
       {posts.map((post) => {
         return (
