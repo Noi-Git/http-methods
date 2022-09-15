@@ -18,6 +18,9 @@ const HomePage = () => {
   return (
     <section>
       <h1 className="page-header">Welcome to Simple Blog</h1>
+      <div className="add-post">
+        <button className="add-post-button"> Add Post</button>
+      </div>
       {posts.map((post) => {
         return (
           <BlogPage

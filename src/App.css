@@ -21,7 +21,24 @@ body {
 
 .page-header {
   margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
+}
+
+.add-post {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.add-post-button {
+  font-size: 1.2rem;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(45, 154, 15);
+  color: rgb(255, 255, 255);
 }
 
 .blog {
@@ -30,6 +47,20 @@ body {
   justify-content: flex-start;
   width: 90%;
   height: 1 150px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  border: 1px solid rgb(220, 217, 217);
+  background-color: rgb(250, 248, 248);
+  border-radius: 8px;
+}
+
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  height: 1 100vh;
   margin: 0 auto;
   padding: 20px;
   margin-top: 50px;
