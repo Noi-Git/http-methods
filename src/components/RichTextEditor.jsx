@@ -1,33 +1,10 @@
-import React, { useState } from 'react';
-import { EditorState } from 'draft-js';
+import React from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { convertToHTML } from 'draft-convert';
-import DOMPurify from 'dompurify';
+
 import '../App.css';
 
-const RichTextEditor = () => {
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
-  const [convertedContent, setConvertedContent] = useState(null);
-
-  const handleEditorChange = (state) => {
-    setEditorState(state);
-    convertContentToHTML();
-  };
-
-  const convertContentToHTML = () => {
-    let currentContentAsHTML = convertToHTML(editorState.getCurrentContent());
-    setConvertedContent(currentContentAsHTML);
-  };
-
-  const createMarkup = (html) => {
-    return {
-      __html: DOMPurify.sanitize(html),
-    };
-  };
-
+const RichTextEditor = ({ handleEditorChange, editorState }) => {
   return (
     <div className='rich-text-editor'>
       <header className='post-description'>Description</header>
