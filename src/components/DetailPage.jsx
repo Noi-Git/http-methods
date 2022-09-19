@@ -1,11 +1,22 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 const DetailPage = ({}) => {
   const { id } = useParams();
   console.log('--- params ---', id);
   const [post, setPost] = useState(null);
+  const navigate = useNavigate();
+
+  const handleDelete = async () => {
+    try {
+      const delet = await axios.delete('http://localhost:3000/posts/' + id);
+      console.log('post deleted');
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const getDetails = async () => {
@@ -28,6 +39,12 @@ const DetailPage = ({}) => {
               __html: post.description,
             }}
           />
+          <Link to={`/edit/${id}`}>
+            <button className='edit-button'>Edit Your Post</button>
+          </Link>
+          <button className='delete-post' onClick={handleDelete}>
+            Delete
+          </button>
         </article>
       )}
     </section>
