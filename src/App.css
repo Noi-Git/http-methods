@@ -39,6 +39,40 @@ body {
   border-radius: 10px;
   background-color: rgb(45, 154, 15);
 }
+.read-more {
+  margin-top: 20px;
+}
+
+.edit-button {
+  font-size: 1rem;
+  padding: 5px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(45, 154, 15);
+  color: white;
+}
+
+.delete-post {
+  font-size: 1rem;
+  padding: 5px 30px;
+  margin-top: 10px;
+  width: 160px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(237, 70, 65);
+  color: white;
+}
+
+.save-post {
+  font-size: 1rem;
+  padding: 5px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(45, 154, 15);
+  color: white;
+}
 
 .add-post-button:hover,
 .add-post-button:visited,
@@ -119,6 +153,7 @@ body {
   padding: 7px 4px;
   width: 50vw;
 }
+
 
 /* -----wysiwyg editor ----- */
 .rich-text-editor {

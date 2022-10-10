@@ -36,7 +36,8 @@ const PostPage = () => {
     try {
       await axios.post('http://localhost:3000/posts', {
         title: title,
-        description: editorState.getCurrentContent().getPlainText('\u0001'),
+        // description: editorState.getCurrentContent().getPlainText('\u0001'),
+        description: convertedContent,
       });
       console.log('post successful');
       navigate('/');
@@ -47,7 +48,7 @@ const PostPage = () => {
 
   return (
     <section>
-      <div className='post'>
+      <div className='post' data-testid='post-page'>
         <form onSubmit={handleSubmit}>
           <div className='post-title'>
             <label htmlFor='post-title'>
@@ -66,7 +67,7 @@ const PostPage = () => {
             editorState={editorState}
           />
           <button type='submit' className='save-post'>
-            Submit
+            Save
           </button>
         </form>
       </div>

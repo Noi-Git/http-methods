@@ -18,7 +18,9 @@ const HomePage = () => {
 
   return (
     <section>
-      <h1 className='page-header'>Welcome to Simple Blog</h1>
+      <h1 className='page-header' data-testid='home-page'>
+        Welcome to Simple Blog
+      </h1>
       <div className='add-post'>
         <button className='add-post-button'>
           <Link
